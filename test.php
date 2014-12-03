@@ -6,13 +6,14 @@ require 'tropo.class.php';
 
 $session = new Session();	 
 $initialText = $session->getInitialText();
-if($initialText) {
+//if($initialText) {
 	$file = 'log.txt';
 $current = file_get_contents($file);
+$current .= "it was run:]\n";
 $current .= $initialText."\n";
 file_put_contents($file, $current);
 
-}
+//}
 
 
 
