@@ -4,6 +4,18 @@
 
 require 'tropo.class.php';
 
+$session = new Session();	 
+$initialText = $session->getInitialText();
+if($initialText) {
+	$file = 'log.txt';
+$current = file_get_contents($file);
+$current .= $initialText."\n";
+file_put_contents($file, $current);
+
+}
+
+
+
 $tropo = new Tropo();
 
 $tropo->call("+16462264945", array('network'=>'SMS'));
