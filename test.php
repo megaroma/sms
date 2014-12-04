@@ -25,5 +25,5 @@ $tropo->say("Tag, you're it!");
 
 $tropo->RenderJson();
 
-echo "test";
+//echo "test";
 ?>
